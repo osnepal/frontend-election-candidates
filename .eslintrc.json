@@ -38,13 +38,7 @@
       }
     ]
   },
-  "ignorePatterns": [
-    "node_modules/",
-    ".next/",
-    "out/",
-    "build/",
-    "dist/"
-  ],
+  "ignorePatterns": ["node_modules/", ".next/", "out/", "build/", "dist/"],
   "env": {
     "browser": true,
     "es2022": true,

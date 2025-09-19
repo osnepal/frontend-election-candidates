@@ -1,42 +1,31 @@
 "use client";
 
+import { CandidateCard } from "@/components/homepage/CandidateCard";
+import HomeSidebar from "@/components/homepage/HomeSidebar";
 import Navbar from "@/components/Navbar";
-import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/lib/contexts/LanguageContext";
+import { candidates } from "@/lib/fake";
 
 export default function Home() {
-  const { t } = useLanguage();
-
   return (
-    <div className="min-h-screen bg-background">
+    <HomeSidebar>
       <Navbar />
-
-      {/* Hero Section */}
-      <main className="pt-16 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            {t("hello")}
-          </h1>
-          <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            {t("description")}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="text-lg font-medium shadow-lg hover:shadow-xl"
-            >
-              {t("getStarted")}
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-lg font-medium shadow-lg hover:shadow-xl"
-            >
-              {t("learnMore")}
-            </Button>
-          </div>
-        </div>
+      <main className="min-h-screen pt-15 flex flex-col items-center bg-blue-50/50 dark:bg-blue-900/10">
+        {/* Hero Section */}
+        <main className="grid grid-cols-1 w-full h-full sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4 max-w-7xl">
+          {candidates.map((c) => (
+            <CandidateCard
+              key={c.id}
+              name={c.name}
+              party={c.party}
+              avatar={c.avatar}
+              votes={c.votes}
+              verified={c.verified}
+              // eslint-disable-next-line no-alert
+              onVote={() => alert(`You voted for ${c.name}`)}
+            />
+          ))}
+        </main>
       </main>
-    </div>
+    </HomeSidebar>
   );
 }

@@ -1,4 +1,5 @@
 export const ne = {
+  appname: "ओएस नेपाल",
   hello: "ओएसनेपालबाट नमस्कार",
   toggleTheme: "थीम बदल्नुहोस्",
   toggleLanguage: "भाषा बदल्नुहोस्",
@@ -27,4 +28,19 @@ export const ne = {
   nepali: "नेपाली",
   hindi: "हिन्दी",
   spanish: "स्पेनिश",
+
+  // sidebar
+  search: "खोज्नुहोस्",
+  country: "देश",
+  province: "प्रदेश",
+  district: "जिल्ला",
+  locale: "नगरपालिका",
+  ward: "वडा",
+  verified: "प्रमाणित",
+  select: "चयन गर्नुहोस्",
+  searchinoptions: "विकल्पहरूमा खोज्नुहोस् ...",
+  pagenotfound: "पृष्ठ भेटिएन",
+  pnfmessage:
+    "माफ गर्नुहोस्, तपाईंले खोज्नु भएको पृष्ठ अवस्थित छैन वा सारिएको छ",
+  gotohome: "मुख्य पृष्ठमा जानुहोस्",
 } as const;
