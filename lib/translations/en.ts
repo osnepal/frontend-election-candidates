@@ -1,4 +1,5 @@
 export const en = {
+  appname: "OSNEPAL",
   hello: "Hello from OSNEPAL",
   toggleTheme: "Toggle theme",
   toggleLanguage: "Toggle language",
@@ -27,4 +28,18 @@ export const en = {
   nepali: "नेपाली",
   hindi: "हिन्दी",
   spanish: "Español",
+  // sidebar
+  search: "Search",
+  country: "Country",
+  province: "Province",
+  district: "District",
+  locale: "Muncipality",
+  ward: "Ward",
+  verified: "Verified",
+  select: "Select",
+  searchinoptions: "Search in options...",
+  pagenotfound: "Page Not Found",
+  pnfmessage:
+    "Sorry, the page you are looking for doesn't exist or has been moved",
+  gotohome: "Go to Home",
 } as const;
