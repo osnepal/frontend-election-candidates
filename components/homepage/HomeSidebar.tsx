@@ -30,6 +30,17 @@ import {
   wards,
 } from "@/lib/fake";
 
+type FormDataType = {
+  q: string;
+  country: string;
+  province: string;
+  district: string;
+  local: string;
+  ward: string;
+  party: string;
+  verified: boolean;
+};
+
 export default function HomeSidebar({
   children,
 }: {
@@ -49,7 +60,7 @@ export default function HomeSidebar({
     },
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormDataType) => {
     console.log("Filter values:", data);
     // TODO: call API or filter logic
   };

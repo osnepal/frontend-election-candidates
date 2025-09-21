@@ -67,6 +67,8 @@ module.exports = [
       "*.config.js",
       "jest.setup.js",
       "components/ui/",
+      ".eslintrc.js",
+      "next-env.d.ts",
     ],
   },
   prettier,
